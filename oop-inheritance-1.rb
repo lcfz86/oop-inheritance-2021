@@ -1,4 +1,6 @@
 class Person
+  attr_accessor :name, :age, :gender
+
   def initialize(name, age, gender)
     @name = name
     @age = age
@@ -11,6 +13,8 @@ class Person
 end
 
 class Student < Person
+  attr_reader :school, :student_id
+
   def initialize(name, age, gender, school, student_id)
     super(name, age, gender)
     @school = school
